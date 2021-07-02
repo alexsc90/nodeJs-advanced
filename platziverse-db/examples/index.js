@@ -10,7 +10,7 @@ async function run () {
     username: process.env.DB_USER || 'platzi',
     password: process.env.DB_PASS || 'root',
     host: process.env.DBHOST || 'localhost',
-    dialect: 'mysql'
+    dialect: 'postgres'
   }
 
   const { Agent, Metric } = await db(config).catch(handleFatalError)
