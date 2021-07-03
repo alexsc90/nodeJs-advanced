@@ -6,7 +6,7 @@ const setupMetricModel = require('./models/metric')
 const setupAgent = require('./lib/agent')
 const setupMetric = require('./lib/metric')
 const defaults = require('defaults')
-if(process.env.NODE_ENV !== 'production') {
+if (process.env.NODE_ENV !== 'production') {
   require('longjohn')
 }
 

@@ -3,8 +3,8 @@
 module.exports = function setupMetric (MetricModel, AgentModel) {
   async function findByAgentUuid (uuid) {
     return MetricModel.findAll({
-      attributes: [ 'type' ],
-      group: [ 'type' ],
+      attributes: ['type'],
+      group: ['type'],
       include: [{
         attributes: [],
         model: AgentModel,
@@ -18,12 +18,12 @@ module.exports = function setupMetric (MetricModel, AgentModel) {
 
   async function findByTypeAgentUuid (type, uuid) {
     return MetricModel.findAll({
-      attributes: [ 'id', 'type', 'value', 'createdAt' ],
+      attributes: ['id', 'type', 'value', 'createdAt'],
       where: {
         type
       },
       limit: 20,
-      order: [[ 'createdAt', 'DESC' ]],
+      order: [['createdAt', 'DESC']],
       include: [{
         attributes: [],
         model: AgentModel,
